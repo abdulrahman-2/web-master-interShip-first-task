@@ -105,7 +105,7 @@
 
   .content {
     h1 {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
 
       @media (min-width: 640px) {
@@ -174,7 +174,7 @@
 
     .left {
       h1 {
-        font-size: 27px;
+        font-size: 25px;
         font-weight: bold;
 
         @media (min-width: 640px) {
@@ -315,12 +315,7 @@
           font-weight: bold;
         }
 
-        p {
-          font-size: 16px;
-        }
-
         span {
-          font-size: 16px;
           font-weight: bold;
           color: var(--primary-color);
           cursor: pointer;
@@ -511,6 +506,135 @@
         h2 {
           font-size: 24px;
           font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.testimonials {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+
+  .content {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .left {
+      grid-column: span 2 / span 2;
+
+      i {
+        font-size: 50px;
+        color: var(--primary-color);
+      }
+
+      h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 24px;
+
+        @media (min-width: 640px) {
+          font-size: 48px;
+        }
+      }
+
+      p {
+        @media (min-width: 640px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .right {
+      grid-column: span 3 / span 3;
+
+      .card {
+        background-color: var(--card-color);
+        border-radius: 12px;
+        padding: 40px;
+        border: 1px solid var(--primary-color);
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 24px;
+
+          h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-color);
+          }
+
+          .bullets {
+            i {
+              font-size: 6px;
+              color: gray;
+
+              &:first-child {
+                color: black;
+              }
+            }
+          }
+        }
+
+        p {
+          font-size: 18px;
+          max-width: 600px;
+        }
+
+        .bottom {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          gap: 24px;
+          margin-top: 40px;
+
+          @media (min-width: 640px) {
+            flex-direction: row;
+            margin-top: 70px;
+          }
+
+          .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+
+            h4 {
+              font-size: 18px;
+              font-weight: 600;
+            }
+
+            span {
+              font-size: 14px;
+            }
+          }
+
+          .arrows {
+            display: flex;
+            align-self: self-end;
+            gap: 16px;
+
+            @media (min-width: 640px) {
+              align-self: flex-start;
+            }
+
+            i {
+              font-size: 40px;
+              color: var(--primary-color);
+            }
+          }
         }
       }
     }
