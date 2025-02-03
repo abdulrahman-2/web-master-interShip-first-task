@@ -2,7 +2,7 @@
   --primary-color: #0b9586;
   --secondary-color: #ffbb1c;
   --card-color: rgba(60, 171, 144, 1);
-  --section-padding: 100px;
+  --section-padding: 70px;
 }
 
 .header {
@@ -99,13 +99,11 @@
   background-position: center;
   height: calc(100vh - 86px);
   color: white;
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
     h1 {
       font-size: 32px;
       font-weight: bold;
@@ -130,12 +128,13 @@
     .btns {
       display: flex;
       flex-direction: column;
-      width: fit-content;
       margin: 0 auto;
+      width: fit-content;
       gap: 18px;
 
       @media (min-width: 640px) {
         flex-direction: row;
+        margin: 0;
       }
 
       button {
@@ -175,7 +174,7 @@
 
     .left {
       h1 {
-        font-size: 32px;
+        font-size: 27px;
         font-weight: bold;
 
         @media (min-width: 640px) {
@@ -226,18 +225,12 @@
   background-image: url("../assets//images//banner-img.png");
   background-size: cover;
   background-position: center;
-  height: 350px;
-  position: relative;
-
-  @media (min-width: 640px) {
-    height: 500px;
-  }
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
     color: white;
 
     h1 {
@@ -253,7 +246,6 @@
       font-size: 16px;
       margin: 24px 0;
       width: 100%;
-      /* text-align: center; */
 
       @media (min-width: 640px) {
         font-size: 24px;
@@ -374,6 +366,124 @@
       @media (min-width: 640px) {
         font-size: 20px;
         max-width: 800px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: rgba(40, 54, 70, 1);
+  padding-top: var(--section-padding);
+  padding-bottom: 20px;
+  color: white;
+
+  .top {
+    h1 {
+      font-size: 35px;
+      font-weight: 700;
+      text-align: center;
+
+      @media (min-width: 640px) {
+        font-size: 45px;
+        text-align: left;
+      }
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-top: 30px;
+
+      @media (min-width: 1024px) {
+        align-items: flex-end;
+        flex-direction: row;
+        margin-top: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+
+        @media (min-width: 1024px) {
+          flex-direction: row;
+        }
+      }
+
+      .newsletter {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        form {
+          display: flex;
+          max-width: 500px;
+          border: 1px solid rgba(179, 189, 199, 1);
+          border-radius: 50px;
+          padding: 1px;
+          overflow: hidden;
+          align-items: center;
+
+          input {
+            border: none;
+            color: white;
+            padding: 0.7rem;
+            flex-grow: 1;
+            border-radius: 50px 0 0 50px;
+            outline: none;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.09);
+          }
+
+          button {
+            background: #fcb914;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  hr {
+    border: 1px solid rgba(113, 119, 125, 1);
+    margin: 50px 0;
+  }
+
+  .bottom {
+    color: rgba(146, 152, 159, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+      }
+
+      @media (max-width: 640px) {
+        .divider {
+          display: none;
+        }
       }
     }
   }
