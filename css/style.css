@@ -218,9 +218,25 @@
     }
 
     .right {
+      position: relative;
       img {
         @media (max-width: 640px) {
           width: 100%;
+        }
+      }
+
+      .sub-side {
+        position: absolute;
+        bottom: 10px;
+        left: -50px;
+
+        @media (max-width: 640px) {
+          img {
+            width: 200px;
+            height: 150px;
+          }
+
+          left: -10px;
         }
       }
     }
